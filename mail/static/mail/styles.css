@@ -1,0 +1,140 @@
+textarea {
+    min-height: 300px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(backgrounds/blur_hut_purple.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    background-color: #f4f4f4; 
+   
+}
+
+
+.email-list {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.emails {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    border-radius: 12px;
+}
+
+.email-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sender {
+    width: 250px; /* Set a fixed width for the sender */
+}
+
+.subject {
+    flex-grow: 1;
+    margin-left: 20px; /* Adjust this margin as needed */
+}
+
+span {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    background-color:lightgrey;
+    padding:10px;
+}
+li:hover {
+    background: #e6aeae;
+    border: 1px solid #d0d0d0;
+
+}
+.read {
+    background-color:rgb(236, 230, 230);
+}
+
+.not-read {
+    background-color: rgb(200, 190, 190);
+}
+
+.mail-up {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+#mail-view {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#compose-view {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.buttons {
+    display:flex;
+  justify-content:space-between;
+}
+
+.container {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.form {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 0;
+}
+
+.login-form {
+
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 0;
+    background-color: beige;
+    max-width: 400px; /* Set a maximum width for the form */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
