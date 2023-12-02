@@ -117,6 +117,10 @@ li:hover {
     border-radius: 12px;
 }
 
+.layout1 {
+    background-color: antiquewhite;
+}
+
 .form {
     display: flex;
   justify-content: center;
