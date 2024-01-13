@@ -74,27 +74,29 @@ def compose(request):
 
 @login_required
 def mailbox(request, mailbox):
+    # Get the search query from the request
+    search_query = request.GET.get('search', '')
 
-    # Filter emails returned based on mailbox
+    # Define the base queryset based on the selected mailbox
     if mailbox == "inbox":
-        emails = Email.objects.filter(
-            user=request.user, recipients=request.user, archived=False
-        )
+        base_query = Email.objects.filter(user=request.user, recipients=request.user, archived=False)
     elif mailbox == "sent":
-        emails = Email.objects.filter(
-            user=request.user, sender=request.user
-        )
+        base_query = Email.objects.filter(user=request.user, sender=request.user)
     elif mailbox == "archive":
-        emails = Email.objects.filter(
-            user=request.user, recipients=request.user, archived=True
-            
-        )
+        base_query = Email.objects.filter(user=request.user, recipients=request.user, archived=True)
     else:
         return JsonResponse({"error": "Invalid mailbox."}, status=400)
 
-    # Return emails in reverse chronologial order
-    emails = emails.order_by("-timestamp").all()
+    # Apply search filter if there is a search query
+    if search_query:
+        base_query = base_query.filter(subject__icontains=search_query)
+
+    # Order the emails in reverse chronological order
+    emails = base_query.order_by("-timestamp").all()
+
+    # Return serialized emails as JSON
     return JsonResponse([email.serialize() for email in emails], safe=False)
+
 
 
 @csrf_exempt
