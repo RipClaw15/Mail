@@ -154,7 +154,7 @@ function load_mail(id) {
                                  Mark as unread</button>
       </div>
       `;
-      // ... do something else with email ...
+      
       document.querySelector('#archive').addEventListener('click', () => {
         fetch(`/emails/${id}`, {
           method: 'PUT',
@@ -201,12 +201,12 @@ window.onload = function() {
 };
 
 
-// Example: inbox.js
+
 function handleSearch() {
   const searchQuery = document.querySelector('input[name="search"]').value;
   console.log(`Search query: ${searchQuery}`);
   load_mailbox('inbox', searchQuery);
-  return false;  // Prevent the form from actually submitting and reloading the page
+  return false;  
 }
 
 
