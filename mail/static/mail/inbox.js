@@ -29,8 +29,9 @@ function send_email(event) {
   })
   .then(response => response.json())
   .then(result => {
+      
       // Print result
-      console.log(result);
+      console.log(result);      
       load_mailbox('sent');
   });
 }
@@ -71,8 +72,7 @@ function load_mailbox(mailbox, searchQuery = null) {
   fetch(apiUrl)
   .then(response => response.json())
   .then(emails => {
-      // Print emails
-      console.log(emails);
+      
       let emailList = document.createElement('ul');
       emailList.classList.add('emails');
       document.querySelector('#emails-view').appendChild(emailList);
@@ -204,7 +204,7 @@ window.onload = function() {
 
 function handleSearch() {
   const searchQuery = document.querySelector('input[name="search"]').value;
-  console.log(`Search query: ${searchQuery}`);
+  
   load_mailbox('inbox', searchQuery);
   return false;  
 }
