@@ -26,7 +26,7 @@ For detailed instructions on setting up and running the project, refer to the [p
 
 ## Video Demo
 
-A video demo showcasing the features and functionality of Mail will be available soon. Stay tuned for updates!
+https://www.youtube.com/watch?v=tcKUAUY4KNU&t=4s
 
 ## Contributing
 
