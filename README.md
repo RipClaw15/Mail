@@ -2,6 +2,10 @@
 
 Welcome to the Mail project repository! This project is based on the CS50 Web course assignment and serves as a simple email client application. Built using Python, Django, HTML, CSS, and JavaScript, Mail offers basic email functionality to users, allowing them to send, receive, and manage emails within the application.
 
+## Video Demo
+
+[![Mail](http://img.youtube.com/vi/tcKUAUY4KNU/0.jpg)](http://www.youtube.com/watch?v=tcKUAUY4KNU)
+
 ## Key Features
 
 - **User Authentication:** Secure user authentication system allowing users to register, login, and logout.
@@ -23,10 +27,6 @@ To get started with Mail, follow these steps:
 4. Run the application locally using the provided Django development server.
 
 For detailed instructions on setting up and running the project, refer to the [project documentation](link_to_documentation).
-
-## Video Demo
-
-[![Mail](http://img.youtube.com/vi/tcKUAUY4KNU/0.jpg)](http://www.youtube.com/watch?v=tcKUAUY4KNU)
 
 
 ## Contributing
